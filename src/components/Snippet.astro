@@ -1,0 +1,120 @@
+<section class="snippet">
+  <div class="container snippet_content">
+    <h2>Keep track of your snippets</h2>
+    <p>
+      Clipboard instantly stores any item you copy in the cloud, meaning you can
+      access your snippets immediately on all your devices. Our Mac and iOS apps
+      will help you organize everything.
+    </p>
+  </div>
+
+  <div class="container snippet_feature_area">
+    <picture
+      ><img
+        src="/images/image-computer.png"
+        alt=""
+        aria-hidden="true"
+      /></picture
+    >
+    <aside>
+      <article>
+        <h3>Quick Search</h3>
+        <p>
+          Easily search your snippets by content, category, web address,
+          application, and more.
+        </p>
+      </article>
+      <article>
+        <h3>iCloud Sync</h3>
+        <p>Instantly saves and syncs snippets across all your devices.</p>
+      </article>
+      <article>
+        <h3>Complete History</h3>
+        <p>
+          Retrieve any snippets from the first moment you started using the app.
+        </p>
+      </article>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .snippet {
+    margin-top: 151px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .snippet_content {
+    text-align: center;
+
+    & h2 {
+      font-size: var(--fs-xl);
+      letter-spacing: -0.1px;
+    }
+    & p {
+      display: inline-block;
+      width: 100%;
+      max-width: 725px;
+      margin-block: 20px 79px;
+      font-size: var(--fs-md);
+      letter-spacing: 0.5px;
+      line-height: 30px;
+    }
+  }
+
+  .snippet_feature_area {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-inline: 20px;
+    padding-right: 100px;
+    & img {
+      position: absolute;
+      left: -191px;
+    }
+
+    aside {
+      width: 100%;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-self: flex-end;
+      gap: 56px;
+      margin-top: 68px;
+      margin-left: 110px;
+
+      & h3 {
+        font-size: var(--fs-lg);
+        letter-spacing: -0.5px;
+      }
+      & p {
+        line-height: 30px;
+        letter-spacing: 0.2px;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  @media (width <= 1069px) {
+    .snippet_feature_area {
+      padding-right: 0;
+      justify-content: center;
+
+      & picture {
+        text-align: center;
+        padding: 20px;
+      }
+      & img {
+        position: initial;
+        width: 100%;
+        max-width: 600px;
+      }
+      aside {
+        text-align: center;
+        max-width: none;
+      }
+    }
+  }
+</style>

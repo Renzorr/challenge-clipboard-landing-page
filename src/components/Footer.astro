@@ -1,0 +1,77 @@
+<footer>
+  <div class="container footer">
+    <img src="./images/logo.svg" alt="Clip" />
+    <ul class="footer_links">
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Install Guide</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Press Kit</a></li>
+    </ul>
+
+    <div class="footer_socials_area">
+      <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+      <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
+      <a href="#"><img src="./images/icon-instagram.svg" alt="" /></a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--light-grayish);
+    margin-top: 150px;
+    padding-block: 38px;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    & img {
+      width: 55px;
+    }
+  }
+
+  .footer_links {
+    color: var(--dark-grayish-blue);
+    width: 100%;
+    max-width: 572px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 135px;
+    padding-top: 5px;
+    row-gap: 20px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  .footer_socials_area {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 8px;
+
+    & img {
+      width: 24px;
+    }
+  }
+
+  @media (width <= 915px) {
+    .footer {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer_links {
+      max-width: none;
+      margin-left: 0;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .footer_socials_area {
+      margin-left: 0;
+    }
+  }
+</style>

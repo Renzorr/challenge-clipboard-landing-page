@@ -52,6 +52,7 @@ const { title } = Astro.props;
   }
   body {
     font-family: "Bai Jamjuree", sans-serif;
+    overflow-x: hidden;
   }
   a {
     text-decoration: none;
@@ -74,20 +75,17 @@ const { title } = Astro.props;
   p {
     color: var(--grayish-blue);
   }
-
   .sr-only {
     position: absolute;
     pointer-events: none;
     visibility: hidden;
   }
-
   .container {
     width: 100%;
     max-width: 1120px;
     margin-inline: auto;
     padding-inline: 5px;
   }
-
   .download_btn_area {
     display: flex;
     justify-content: center;
@@ -115,6 +113,61 @@ const { title } = Astro.props;
       &:nth-child(2) {
         background-color: var(--light-blue);
         --shadow-color: var(--shadow-light-blue);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    #fade-in-down {
+      animation: fade-in-down linear forwards;
+      animation-timeline: view();
+      animation-range: -700px;
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+    @keyframes fade-in-down {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    #fade-in-up {
+      animation: fade-in-up 0.5s linear forwards;
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    @keyframes fade-in-up {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    #appear-in {
+      animation: appear-in linear forwards;
+      animation-timeline: view();
+      animation-range: 210px;
+      opacity: 0;
+    }
+    @keyframes appear-in {
+      to {
+        opacity: 1;
+      }
+    }
+
+    #fade-in-right {
+      animation: fade-in-right linear forwards;
+      animation-delay: 5s;
+      animation-timeline: view();
+      animation-range: 10px;
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    @keyframes fade-in-right {
+      to {
+        transform: translateX(0);
+        opacity: 1;
       }
     }
   }
